@@ -1,0 +1,45 @@
+{
+  "name": "electron-nextjs-mui",
+  "productName": "Electron App",
+  "version": "1.0.0",
+  "main": "main/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "next build renderer && next export renderer",
+    "dist": "NODE_ENV=production npm run build && build --dir"
+  },
+  "build": {
+    "asar": false,
+    "extraResources": [
+      {
+        "from": "renderer/out",
+        "to": "app/renderer"
+      }
+    ]
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.8.0",
+    "devtron": "^1.4.0",
+    "electron": "^3.1.0",
+    "electron-builder": "^20.36.2",
+    "electron-devtools-installer": "^2.2.4",
+    "next": "^7.0.2",
+    "react": "^16.8.0-alpha.0",
+    "react-dom": "^16.8.0-alpha.0",
+    "styled-components": "^4.1.1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.1",
+    "@material-ui/icons": "^3.0.2",
+    "@material-ui/styles": "^3.0.0-alpha.9",
+    "axios": "^0.18.0",
+    "electron-is-dev": "^1.0.1",
+    "electron-next": "^3.1.5",
+    "electron-store": "^2.0.0",
+    "jss": "^9.8.7",
+    "lodash": "^4.17.11",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.6.2",
+    "react-jss": "^8.6.1"
+  }
+}

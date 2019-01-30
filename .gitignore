@@ -1,0 +1,20 @@
+# Build output
+dist
+out
+.next
+.build
+
+# Dependencies
+node_modules
+
+# files, logs, and pids
+*.log
+*.tgz
+pids
+
+# OS and Editor specific
+.DS_STORE
+.vscode
+
+# Env variables
+*.env
